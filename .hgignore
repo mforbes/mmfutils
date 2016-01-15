@@ -1,0 +1,12 @@
+syntax: glob
+
+.cache/*
+.coverage*
+.eggs
+.ipynb_checkpoints
+.tox
+build
+dist
+mmfutils.egg-info
+*.egg
+*/htmlcov
