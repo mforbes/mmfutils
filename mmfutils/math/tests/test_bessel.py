@@ -1,6 +1,5 @@
 from mmfutils.math import bessel
 
-import math
 import numpy as np
 
 

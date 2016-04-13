@@ -3,7 +3,7 @@ from __future__ import absolute_import, division
 
 __all__ = ('prod', 'norm', 'ndgrid',
            'fft', 'ifft', 'fftn', 'ifftn', 'fftn', 'ifftn', 'resample',
-           'dst', 'idst')
+           'dst', 'idst', 'get_xyz')
 
 import functools
 import operator
@@ -88,6 +88,7 @@ def dst(f, axis=-1):
                 sp.fftpack.dst(f.imag, **args))
     else:
         return sp.fftpack.dst(f, **args)
+
 
 def idst(F, axis=-1):
     """Return the Inverse Discrete Sine Transform (DST II) of `f`"""

@@ -46,7 +46,8 @@ def sinc(x, d=0):
                         x*(x2*(-x2/280 + 0.1) - 1.0)/3.0,
                         (np.cos(x)-np.sinc(x/np.pi))/x)
     else:
-        raise NotImplementedError("Only `d=0` or `1` supported.")
+        raise NotImplementedError("Only d=0 or 1 supported (got d={})."
+                                  .format(d))
 
 
 def J(nu, d=0):
@@ -211,7 +212,7 @@ def j_root(nu, N, rel_tol=2*_EPS):
     nu2 = 2*nu
 
     if nu2 < 0:
-        raise ValueError("mu must be non-negative")
+        raise ValueError("nu must be non-negative")
     elif 1 == nu2:
         # Roots of sin(x)/x = 0:
         # x = pi*n excluding n=0
@@ -447,7 +448,8 @@ def J_sqrt_pole(nu, zn, d=0):
                             _Horner(a_dF, denom))
         return dF
     else:
-        raise ValueError("Only d=0 or 1 supported.")
+        raise NotImplementedError("Only d=0 or 1 supported (got d={})."
+                                  .format(d))
 
 
 def _Horner(a, d):

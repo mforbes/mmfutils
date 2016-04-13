@@ -285,8 +285,8 @@ class TestPeriodicBasis(ConvolutionTests):
                 ddy = laplacian(exact.y, factor=exact.factor, _k2=_k2)
                 assert np.allclose(ddy, exact.d2y, atol=1e-6)
 
-                #exp_ddy = laplacian(self.y, factor=exact.factor, exp=True)
-                #assert np.allclose(exp_ddy, exact.exp_d2y)
+                # exp_ddy = laplacian(self.y, factor=exact.factor, exp=True)
+                # assert np.allclose(exp_ddy, exact.exp_d2y)
 
     def test_gradient(self):
         """Test the gradient"""
@@ -394,8 +394,8 @@ class TestCartesianBasis(ConvolutionTests):
                 ddy = laplacian(exact.y, factor=exact.factor, _k2=_k2)
                 assert np.allclose(ddy, exact.d2y, atol=1e-6)
 
-                #exp_ddy = laplacian(self.y, factor=exact.factor, exp=True)
-                #assert np.allclose(exp_ddy, exact.exp_d2y)
+                # exp_ddy = laplacian(self.y, factor=exact.factor, exp=True)
+                # assert np.allclose(exp_ddy, exact.exp_d2y)
 
     def test_gradient(self):
         """Test the gradient"""
@@ -469,8 +469,8 @@ class TestCylindricalBasis(LaplacianTests):
                 ddy = laplacian(exact.y, factor=exact.factor, _kx2=_kx2)
                 assert np.allclose(ddy, exact.d2y)
 
-                #exp_ddy = laplacian(self.y, factor=exact.factor, exp=True)
-                #assert np.allclose(exp_ddy, exact.exp_d2y)
+                # exp_ddy = laplacian(self.y, factor=exact.factor, exp=True)
+                # assert np.allclose(exp_ddy, exact.exp_d2y)
 
     def test_gradient(self):
         """Test the gradient"""
